@@ -6,18 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/style/general.css" />
     <link rel="stylesheet" href="/style/index.css" />
+    <script>
+      /*https://css-tricks.com/styling-based-on-scroll-position/
+      this is the only js i'm using i swear.*/
+      const storeScroll = () => {
+        document.documentElement.dataset.scroll = window.scrollY;
+      };
+      document.addEventListener("scroll", storeScroll, { passive: true });
+      storeScroll();
+    </script>
     <title>Matthew Hre</title>
   </head>
   <body class="flex flex-column flex-center">
     <header>
       <div class="flex flex-center logo">
-        <img src="/images/logo.png" alt="logo" />
+        <img src="/images/laptop.png" alt="logo" />
       </div>
       <nav class="flex flex-center">
         <ul class="flex flex-row">
           <li><a href="/index.html">Home</a></li>
-          <li><a href="/about.html">About</a></li>
-          <li><a href="/projects.html">Projects</a></li>
+          <li><a href="#projects">Projects</a></li>
           <li><a href="/contact.html">Contact</a></li>
         </ul>
       </nav>
@@ -39,10 +47,75 @@
         <li>GitHub</li>
         <li>C#</li>
         <li>.NET</li>
-        <li>SQL</li>
       </ul>
     </div>
-    <main>
+    <main id="projects">
+      <article>
+        <img
+          src="https://img.itch.zone/aW1nLzk0NDA4MzYucG5n/original/RpDF6L.png"
+          alt="PLACEHOLDER"
+        />
+        <div>
+          <h2>Rorschach / Rorschach Plus</h2>
+          <small>December 23, 2019. Re-released January 19, 2021.</small>
+          <p>
+            Rorschach Plus is a precise, experimental puzzle platformer where
+            you use paint to reveal your surroundings. Platforming through the
+            levels is only half the challenge, the other is figuring out exactly
+            what you're platforming through.
+          </p>
+          <p>
+            Rorschach Plus is a re-release of Rorschach, made by a friend of
+            mine. It featured a total mechanic overhaul, new levels, and a new
+            soundtrack.
+          </p>
+          <p>
+            The original jam version of Rorschach can be found
+            <a href="https://whycardboard.itch.io/rorschach" target="_blank"
+              >here</a
+            >, and the Steam page for Rorschach Plus can be found
+            <a
+              href="https://store.steampowered.com/app/1499210/Rorschach_Plus/"
+              target="_blank"
+              >here</a
+            >.
+          </p>
+
+          <ul>
+            <li>C#</li>
+            <li>.NET</li>
+            <li>JavaScript</li>
+            <li>GitHub</li>
+          </ul>
+        </div>
+      </article>
+      <article>
+        <div>
+          <h2>PLACEHOLDER</h2>
+          <small>date time year</small>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+            voluptas, quod, quia, voluptates quae voluptatibus quibusdam
+            voluptatum quos quidem quas nesciunt. Quisquam, quae. Quisquam
+            voluptas, quod, quia, voluptates quae voluptatibus quibusdam
+            voluptatum quos quidem quas nesciunt. Quisquam, quae.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+            voluptas, quod, quia, voluptates quae voluptatibus quibusdam
+            voluptatum quos quidem quas nesciunt. Quisquam, quae. Quisquam
+            voluptas, quod, quia, voluptates quae voluptatibus quibusdam
+            voluptatum quos quidem quas nesciunt. Quisquam, quae.
+          </p>
+          <ul>
+            <li>PLACEHOLDER</li>
+            <li>PLACEHOLDER</li>
+            <li>PLACEHOLDER</li>
+            <li>PLACEHOLDER</li>
+          </ul>
+        </div>
+        <img src="/images/PLACEHOLDER.jpg" alt="PLACEHOLDER" />
+      </article>
       <article>
         <img src="/images/PLACEHOLDER.jpg" alt="PLACEHOLDER" />
         <div>

@@ -1,17 +1,19 @@
 :root {
   --primary-color: #131313;
   --secondary-color: #eee;
+  --darker-color: #333;
+  --lighter-color: #aaa;
   --primary-font: "Lexend Deca", sans-serif;
 }
 
 .hero {
-  padding: 2rem;
+  padding: 2.5rem;
+  transition: all 0.3s ease-in-out;
 }
 
 .hero h1 {
   font-size: clamp(4.375rem, 1.5461rem + 11.3158vw, 15.125rem);
   line-height: clamp(4.375rem, 1.5461rem + 11.3158vw, 15.125rem);
-  padding-bottom: 2rem;
 }
 
 .technologies {
@@ -38,6 +40,121 @@
 .technologies li:hover {
   background-color: var(--secondary-color);
   color: var(--primary-color);
-  width: 150%;
   cursor: pointer;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+article {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: 1fr;
+  padding: 1rem;
+}
+
+article h2 {
+  font-family: var(--primary-font);
+  font-size: 3.5rem;
+  padding: 0 1rem;
+}
+
+article small {
+  font-family: var(--primary-font);
+  color: var(--darker-color);
+  font-size: 1.5rem;
+  width: 100%;
+  padding: 1rem;
+  padding-top: 0;
+}
+
+article p {
+  font-family: var(--primary-font);
+  font-size: 1.5rem;
+  padding: 1rem;
+}
+
+article ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  padding: 0;
+  margin-left: 0.5rem;
+}
+
+article li {
+  list-style: none;
+  padding: 1rem;
+  font-family: var(--primary-font);
+  background-color: var(--lighter-color);
+  color: var(--darker-color);
+  margin: 0.5rem;
+  border-radius: 0.5rem;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+}
+
+article li:hover {
+  color: var(--primary-color);
+  cursor: pointer;
+}
+
+article:nth-child(even) {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  grid-template-columns: 4fr 1fr;
+}
+
+article:nth-child(even) h2,
+article:nth-child(even) p {
+  text-align: right;
+  color: var(--secondary-color);
+}
+
+article:nth-child(even) small {
+  float: right;
+  text-align: right;
+  color: var(--lighter-color);
+}
+
+article:nth-child(even) li {
+  background-color: var(--darker-color);
+  color: var(--lighter-color);
+}
+
+article:nth-child(even) ul {
+  justify-content: flex-end;
+  margin-right: 0.5rem;
+}
+
+@media (min-width: 1024px) {
+  .technologies li:hover {
+    width: 150%;
+  }
+}
+
+@media (max-width: 1010px) {
+  .technologies ul {
+    flex-wrap: wrap;
+  }
+
+  .technologies li {
+    width: 20%;
+  }
+
+  article {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+  html[data-scroll="0"] .hero {
+    padding-top: 8rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .technologies li {
+    width: 30%;
+  }
 }
