@@ -1,0 +1,43 @@
+:root {
+  --primary-color: #131313;
+  --secondary-color: #eee;
+  --primary-font: "Lexend Deca", sans-serif;
+}
+
+.hero {
+  padding: 2rem;
+}
+
+.hero h1 {
+  font-size: clamp(4.375rem, 1.5461rem + 11.3158vw, 15.125rem);
+  line-height: clamp(4.375rem, 1.5461rem + 11.3158vw, 15.125rem);
+  padding-bottom: 2rem;
+}
+
+.technologies {
+  background-color: var(--primary-color);
+  width: 100%;
+}
+
+.technologies ul {
+  display: flex;
+  justify-content: space-around;
+  padding: 0;
+}
+
+.technologies li {
+  list-style: none;
+  color: var(--secondary-color);
+  padding: 1rem;
+  font-family: var(--primary-font);
+  width: 100%;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+}
+
+.technologies li:hover {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  width: 150%;
+  cursor: pointer;
+}
