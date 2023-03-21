@@ -49,10 +49,16 @@ main {
 }
 
 article {
-  display: grid;
-  grid-template-columns: 1fr 4fr;
-  grid-template-rows: 1fr;
+  display: flex;
+  flex-direction: row;
   padding: 1rem;
+}
+
+article img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0.5rem;
 }
 
 article h2 {
@@ -64,7 +70,7 @@ article h2 {
 article small {
   font-family: var(--primary-font);
   color: var(--darker-color);
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   width: 100%;
   padding: 1rem;
   padding-top: 0;
@@ -96,18 +102,14 @@ article li {
   transition: all 0.3s ease-in-out;
 }
 
-article li:hover {
-  color: var(--primary-color);
-  cursor: pointer;
-}
-
 article:nth-child(even) {
   background-color: var(--primary-color);
   color: var(--secondary-color);
-  grid-template-columns: 4fr 1fr;
+  grid-template-columns: 2fr 1fr;
 }
 
 article:nth-child(even) h2,
+article:nth-child(even) h2 a,
 article:nth-child(even) p {
   text-align: right;
   color: var(--secondary-color);
@@ -135,6 +137,91 @@ article:nth-child(even) ul {
   }
 }
 
+summary {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  width: 100%;
+  background-color: var(--primary-color);
+}
+
+summary h3 {
+  font-family: var(--primary-font);
+  font-size: clamp(6rem, 4.3696rem + 2.6087vw, 7.5rem);
+  padding: 1rem;
+  color: var(--secondary-color);
+}
+
+summary fieldset {
+  width: 100%;
+  border: none;
+  padding: 1rem;
+}
+
+summary fieldset legend {
+  display: none;
+}
+
+summary fieldset label span {
+  font-family: var(--primary-font);
+  font-size: 2rem;
+  padding: 1rem;
+  color: var(--secondary-color);
+  margin-right: 1rem;
+}
+
+summary fieldset input {
+  width: 100%;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  margin-top: 0.5rem;
+  font-family: var(--primary-font);
+  font-size: 1.5rem;
+  border: none;
+  border-bottom: 1px solid var(--primary-color);
+  transition: all 0.3s ease-in-out;
+}
+
+summary fieldset input:focus {
+  outline: none;
+  border-bottom: 1px solid var(--secondary-color);
+}
+
+summary fieldset textarea {
+  width: 100%;
+  padding: 1rem;
+  margin-top: 0.5rem;
+  resize: none;
+  font-family: var(--primary-font);
+  font-size: 1.5rem;
+  border: none;
+  border-bottom: 1px solid var(--primary-color);
+  transition: all 0.3s ease-in-out;
+}
+
+summary fieldset textarea:focus {
+  outline: none;
+  border-bottom: 1px solid var(--secondary-color);
+}
+
+summary fieldset button {
+  width: 100%;
+  padding: 1rem;
+  font-family: var(--primary-font);
+  font-size: 1.5rem;
+  border: none;
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  transition: all 0.3s ease-in-out;
+  margin-top: 3rem;
+}
+
+summary fieldset button:hover {
+  background-color: var(--darker-color);
+  color: var(--secondary-color);
+  cursor: pointer;
+}
+
 @media (max-width: 1010px) {
   .technologies ul {
     flex-wrap: wrap;
@@ -144,12 +231,54 @@ article:nth-child(even) ul {
     width: 20%;
   }
 
-  article {
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
+  article,
+  article:nth-child(even) {
+    flex-direction: column;
   }
+
+  article:nth-child(even) h2,
+  article:nth-child(even) h2 a,
+  article:nth-child(even) p {
+    text-align: left;
+    color: var(--secondary-color);
+  }
+
+  article:nth-child(even) small {
+    float: left;
+    text-align: left;
+    color: var(--lighter-color);
+  }
+
+  article:nth-child(even) ul {
+    justify-content: flex-start;
+    margin-right: 0.5rem;
+  }
+
+  article:nth-child(even) {
+    flex-direction: column-reverse;
+  }
+
+  article img {
+    max-width: 90%;
+    margin: 0 auto;
+  }
+
   html[data-scroll="0"] .hero {
     padding-top: 8rem;
+  }
+
+  article ul {
+    flex-wrap: wrap;
+  }
+
+  summary {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  summary h3 {
+    font-size: 3rem;
+    padding: 1rem;
   }
 }
 

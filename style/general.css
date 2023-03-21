@@ -112,6 +112,27 @@ header nav ul li a:hover {
   text-decoration: underline;
 }
 
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  width: 100%;
+  font-family: var(--primary-font);
+}
+
+footer a {
+  color: var(--primary-color);
+  margin-right: 2rem;
+  transition: all 0.3s ease-in-out;
+}
+
+footer img {
+  width: 2rem;
+  height: 2rem;
+}
+
 @media (max-width: 1010px) {
   header {
     display: flex;

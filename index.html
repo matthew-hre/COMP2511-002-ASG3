@@ -9,9 +9,8 @@
     <script>
       /*https://css-tricks.com/styling-based-on-scroll-position/
       this is the only js i'm using i swear.*/
-      const storeScroll = () => {
-        document.documentElement.dataset.scroll = window.scrollY;
-      };
+      const storeScroll = () =>
+        (document.documentElement.dataset.scroll = window.scrollY);
       document.addEventListener("scroll", storeScroll, { passive: true });
       storeScroll();
     </script>
@@ -24,13 +23,13 @@
       </div>
       <nav class="flex flex-center">
         <ul class="flex flex-row">
-          <li><a href="/index.html">Home</a></li>
+          <li><a href="#hero">Home</a></li>
           <li><a href="#projects">Projects</a></li>
-          <li><a href="/contact.html">Contact</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
     </header>
-    <div class="hero">
+    <div class="hero" id="hero">
       <h1>Matthew Hre is a Software Developer</h1>
     </div>
     <div class="technologies">
@@ -67,10 +66,7 @@
           <p>
             Rorschach Plus is a re-release of Rorschach, made by a friend of
             mine. It featured a total mechanic overhaul, new levels, and a new
-            soundtrack.
-          </p>
-          <p>
-            The original jam version of Rorschach can be found
+            soundtrack. The original jam version of Rorschach can be found
             <a href="https://whycardboard.itch.io/rorschach" target="_blank"
               >here</a
             >, and the Steam page for Rorschach Plus can be found
@@ -86,56 +82,114 @@
             <li>.NET</li>
             <li>JavaScript</li>
             <li>GitHub</li>
+            <li>Git</li>
           </ul>
         </div>
       </article>
       <article>
         <div>
-          <h2>PLACEHOLDER</h2>
-          <small>date time year</small>
+          <h2>
+            <a href="https://www.matthew-hre.com" target="_blank"
+              >matthew-hre.com</a
+            >
+          </h2>
+          <small>January 9, 2023</small>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
-            voluptas, quod, quia, voluptates quae voluptatibus quibusdam
-            voluptatum quos quidem quas nesciunt. Quisquam, quae. Quisquam
-            voluptas, quod, quia, voluptates quae voluptatibus quibusdam
-            voluptatum quos quidem quas nesciunt. Quisquam, quae.
+            This is a website I made to showcase my work and skills. It's
+            currently a work in progress, and I'm still adding features and
+            content. It's built with NextJS, and is hosted on Vercel.
           </p>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
-            voluptas, quod, quia, voluptates quae voluptatibus quibusdam
-            voluptatum quos quidem quas nesciunt. Quisquam, quae. Quisquam
-            voluptas, quod, quia, voluptates quae voluptatibus quibusdam
-            voluptatum quos quidem quas nesciunt. Quisquam, quae.
+            It was originally built with React, but I decided to switch to
+            NextJS for easier routing and SEO. It also makes API access
+            significantly easier. I'm currently working on adding a blog using
+            Firebase.
           </p>
           <ul>
-            <li>PLACEHOLDER</li>
-            <li>PLACEHOLDER</li>
-            <li>PLACEHOLDER</li>
-            <li>PLACEHOLDER</li>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>React</li>
+            <li>NextJS</li>
+            <li>Firebase</li>
+            <li>Node</li>
           </ul>
         </div>
-        <img src="/images/PLACEHOLDER.jpg" alt="PLACEHOLDER" />
+        <img
+          src="/images/matthew-hre.png"
+          alt="a screenshot of the website www.matthew-hre.com"
+        />
       </article>
       <article>
-        <img src="/images/PLACEHOLDER.jpg" alt="PLACEHOLDER" />
+        <img
+          src="/images/1501.png"
+          alt="a screenshot of the practice website"
+        />
         <div>
-          <h2>PLACEHOLDER</h2>
-          <small>date time year</small>
+          <h2>
+            <a href="https://1501-practice-site.vercel.app/" target="_blank"
+              >Comp 1501 Practice Website</a
+            >
+          </h2>
+          <small>December 9, 2022</small>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
-            voluptas, quod, quia, voluptates quae voluptatibus quibusdam
-            voluptatum quos quidem quas nesciunt. Quisquam, quae. Quisquam
-            voluptas, quod, quia, voluptates quae voluptatibus quibusdam
-            voluptatum quos quidem quas nesciunt. Quisquam, quae.
+            This is a website I made for my Comp 1501 class. It's a simple page
+            full of interactive Python practice problems to prepare for the
+            final exam. It's built with raw React, and uses Tailwind for
+            styling.
           </p>
+          <p>
+            I fought over how to style the page for a while, but eventually
+            settled on Tailwind. I'm not a huge fan of the class-based styling,
+            but for a simple page like this it works well.
+          </p>
+          <p>
+            This was also a fun exploration into code snippets for React. There
+            are a ton of libraries for this, and a good amount of them were
+            absolutely terrible.
+          </p>
+
           <ul>
-            <li>PLACEHOLDER</li>
-            <li>PLACEHOLDER</li>
-            <li>PLACEHOLDER</li>
-            <li>PLACEHOLDER</li>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>Tailwind</li>
+            <li>React</li>
+            <li>Python</li>
           </ul>
         </div>
       </article>
     </main>
+    <summary>
+      <fieldset id="contact">
+        <legend>Get in touch</legend>
+        <label>
+          <span>Name</span>
+          <input type="text" name="name" placeholder="Name" />
+        </label>
+        <label>
+          <span>Email</span>
+          <input type="email" name="email" placeholder="@email" />
+        </label>
+        <label>
+          <span>Message</span>
+          <textarea name="message" placeholder="Say something nice!"></textarea>
+        </label>
+        <button type="submit">Send</button>
+      </fieldset>
+      <h3>Contact, hire, or work with me.</h3>
+    </summary>
+    <footer>
+      <div class="flex flex-center">
+        <a href="#" target="_blank"
+          ><img src="/images/linkedin.png" alt="linkedin logo"
+        /></a>
+        <a href="#" target="_blank"
+          ><img src="/images/github.png" alt="github logo"
+        /></a>
+        <a href="#" target="_blank"
+          ><img src="/images/itchio.svg" alt="itch.io logo"
+        /></a>
+      </div>
+      <p>&copy; 2021 Matthew Hrehirchuk</p>
+    </footer>
   </body>
 </html>
