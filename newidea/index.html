@@ -8,21 +8,15 @@
     <link rel="stylesheet" href="style/general.css" />
     <title>new idea</title>
   </head>
-  <body>
+  <body id="top">
     <main>
-      <div class="nav-item">matthew's site</div>
-      <div class="nav-item" tabindex="0" role="button" aria-label="menu">
-        who
+      <div class="nav-item">
+        <h1>matthew's site</h1>
       </div>
-      <div class="nav-item" tabindex="0" role="button" aria-label="menu">
-        what
-      </div>
-      <div class="nav-item" tabindex="0" role="button" aria-label="menu">
-        when
-      </div>
-      <div class="nav-item" tabindex="0" role="button" aria-label="menu">
-        why
-      </div>
+      <a class="nav-item active" href="#top"> who </a>
+      <a class="nav-item"> what </a>
+      <a class="nav-item"> when </a>
+      <a class="nav-item"> why </a>
       <article class="center">
         <h2>hi there!</h2>
         <p>i'm matthew, and i'm a software engineer.</p>
@@ -35,10 +29,31 @@
           if you have an idea, or want to say hi, make sure to fill out the form
           on your right! i'll get back to you as soon as i can.
         </p>
+        <div class="bottom-left no-border">
+          <img
+            src="images/happiness.png"
+            alt="a smiley face"
+            class="spin icon-large"
+          />
+        </div>
       </article>
       <form>
-        <input type="text" placeholder="who are you?" />
-        <input type="text" placeholder="wh@t's your email?" />
+        <label for="name">who are you?</label>
+        <input
+          type="text"
+          placeholder="who are you?"
+          id="name"
+          name="name"
+          required
+        />
+        <label for="email">wh@t's your email?</label>
+        <input
+          type="text"
+          placeholder="wh@t's your email?"
+          id="email"
+          name="email"
+          required
+        />
         <input type="submit" value="i'll say hi!" />
       </form>
     </main>
