@@ -306,6 +306,7 @@ footer span:hover ~ small {
 @media (max-width: 650px) {
   body {
     overflow: auto;
+    padding: 0.25em;
   }
 
   main {
