@@ -19,6 +19,7 @@ body {
   padding: 2.5em;
   overflow: hidden;
   background-color: var(--secondary);
+  transition: all 0.5s ease;
 }
 
 main,
@@ -188,9 +189,8 @@ input:focus::placeholder {
 }
 
 footer {
-  position: absolute;
-  right: 4em;
-  bottom: 0.6em;
+  width: 100%;
+  margin-top: -4px;
 }
 
 footer small {
@@ -204,7 +204,6 @@ footer span {
   color: var(--primary);
   font-size: 2.5rem;
   position: relative;
-  top: 0.15em;
 }
 
 footer span:hover {
@@ -212,7 +211,7 @@ footer span:hover {
 }
 
 footer span:hover ~ small {
-  bottom: -0.1em;
+  bottom: 0.25em;
 }
 
 .icon-large,
@@ -364,11 +363,10 @@ footer span:hover ~ small {
 
   footer small {
     left: 0;
-    bottom: -0.05rem;
+    bottom: 0.3rem;
   }
 
   footer span {
-    left: 16.8rem;
     bottom: 0;
   }
 }
