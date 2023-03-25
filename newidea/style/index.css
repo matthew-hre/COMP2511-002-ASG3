@@ -1,0 +1,80 @@
+:root {
+  --primary: #f72e2a;
+  --secondary: #ffeffa;
+}
+
+form {
+  grid-column: span 5;
+  grid-row: span 3;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+
+label {
+  display: none;
+}
+
+input {
+  border: 0;
+  border-bottom: 2px solid var(--primary);
+  padding: 0.5em;
+  background: transparent;
+  color: var(--primary);
+  text-align: center;
+  font-size: clamp(1.25rem, 0.9211rem + 1.3158vw, 2.5rem);
+  font-family: "Space Mono", monospace;
+}
+
+input[type="submit"] {
+  background: transparent;
+  color: var(--primary);
+  cursor: pointer;
+  border-bottom: 0;
+}
+
+input::placeholder {
+  color: var(--primary);
+  opacity: 1;
+}
+
+input:focus::placeholder {
+  opacity: 0.5;
+}
+
+input:focus {
+  box-sizing: border-box;
+  border: 5px solid var(--primary);
+  border-bottom: 7px solid var(--primary);
+  border-right: 7px solid var(--primary);
+  outline: none;
+}
+
+input[type="submit"]:hover {
+  color: var(--secondary);
+  background: var(--primary);
+  cursor: pointer;
+}
+
+.spin {
+  animation: spin 12s linear infinite;
+  position: relative;
+  top: 1em;
+  right: 1em;
+  opacity: 0.2;
+  z-index: -1;
+}
+
+.spin:hover {
+  animation-play-state: paused;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
