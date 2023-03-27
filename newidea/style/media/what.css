@@ -1,6 +1,6 @@
 :root {
   --primary: #f72e2a;
-  --secondary: #ffeffa;
+  --secondary: #ffeffc;
 }
 
 @media (max-width: 900px) {
@@ -9,7 +9,7 @@
     grid-template-rows: 1fr 1fr 4fr 1fr;
   }
 
-  .sideways {
+  aside.sideways {
     display: none;
   }
 
@@ -52,6 +52,10 @@
 
   article p {
     font-size: 1rem;
+  }
+
+  .flowers {
+    display: none;
   }
 }
 
@@ -120,5 +124,9 @@
 
   footer span {
     bottom: 0;
+  }
+
+  .flowers {
+    display: none;
   }
 }

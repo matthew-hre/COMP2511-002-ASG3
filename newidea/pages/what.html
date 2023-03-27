@@ -24,22 +24,47 @@
       <aside class="sideways">here are a few of my projects!</aside>
       <div class="carousel" id="carousel">
         <article class="center article">
-          <h2>hi there!</h2>
-          <p>i'm matthew, and i'm a software engineer.</p>
+          <h2>rorschach</h2>
+          <small>december 23, 2019. re-released january 19, 2021.</small>
           <p>
-            i've made a lot of things, and i'm always looking for new projects
-            and ideas.
+            rorschach plus is a precise, experimental puzzle platformer where
+            you use paint to reveal your surroundings. platforming through the
+            levels is only half the challenge, the other is figuring out exactly
+            what you're platforming through.
           </p>
 
           <p>
-            if you have an idea, or want to say hi, make sure to fill out the
-            form on your right! i'll get back to you as soon as i can.
+            rorschach plus is a re-release of rorschach, made by a friend of
+            mine. it featured a total mechanic overhaul, new levels, and a new
+            soundtrack. the original jam version of rorschach can be found
+            <a href="https://whycardboard.itch.io/rorschach" target="_blank"
+              >here</a
+            >, and the steam page for rorschach plus can be found
+            <a
+              href="https://store.steampowered.com/app/1499210/Rorschach_Plus/"
+              target="_blank"
+              >here</a
+            >.
           </p>
         </article>
         <article class="center article">
-          <h2>hi there again!</h2>
-          <p>i'm matthew, and i'm a software engineer.</p>
-          <p>aaaaa</p>
+          <h2>
+            <a href="https://www.matthew-hre.com" target="_blank"
+              >matthew-hre.com</a
+            >
+          </h2>
+          <small>january 9, 2021.</small>
+          <p>
+            this is a website i made to showcase my work and skills. it's
+            currently a work in progress, and i'm still adding features and
+            content. it's built with nextjs, and is hosted on vercel.
+          </p>
+          <p>
+            it was originally built with react, but I decided to switch to
+            nextjs for easier routing and seo. It also makes api access
+            significantly easier. i'm currently working on adding a blog using
+            firebase.
+          </p>
         </article>
         <article class="center article">
           <h2>hi there again!</h2>
@@ -48,10 +73,16 @@
         </article>
       </div>
       <aside class="articlenav">
-        <a class="button" onclick="rightButtonPressed()">
+        <img
+          class="flowers"
+          src="../images/pixelflowers.png"
+          alt="pixelated flowers"
+        />
+
+        <a class="button" onclick="rightButtonPressed()" id="rightButton">
           <img src="../images/right-arrow.png" alt="arrow" class="icon-small" />
         </a>
-        <a class="button" onclick="leftButtonPressed()">
+        <a class="button" onclick="leftButtonPressed()" id="leftButton">
           <img src="../images/right-arrow.png" alt="arrow" class="icon-small" />
         </a>
       </aside>

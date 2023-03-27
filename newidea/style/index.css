@@ -1,6 +1,6 @@
 :root {
   --primary: #f72e2a;
-  --secondary: #ffeffa;
+  --secondary: #ffeffc;
 }
 
 form {
@@ -77,4 +77,13 @@ input[type="submit"]:hover {
   100% {
     transform: rotate(360deg);
   }
+}
+
+.below {
+  display: none;
+}
+
+.below,
+.on-right {
+  font-size: 1em;
 }

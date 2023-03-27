@@ -1,6 +1,6 @@
 :root {
   --primary: #f72e2a;
-  --secondary: #ffeffa;
+  --secondary: #ffeffc;
 }
 
 @media (max-width: 900px) {
@@ -119,5 +119,13 @@
 
   footer span {
     bottom: 0;
+  }
+
+  .below {
+    display: inline;
+  }
+
+  .on-right {
+    display: none;
   }
 }
