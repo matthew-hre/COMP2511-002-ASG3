@@ -16,7 +16,7 @@ aside.sideways {
   text-align: right;
 }
 
-aside:last-child {
+.articlenav {
   border-right: none;
   grid-column-start: 9;
   grid-column-end: 11;
@@ -26,7 +26,7 @@ aside:last-child {
   grid-template-rows: repeat(5, 1fr);
 }
 
-aside:last-child a {
+.articlenav a {
   grid-row: 5;
   border-right: 2px solid var(--primary);
   border-top: 2px solid var(--primary);
@@ -36,24 +36,24 @@ aside:last-child a {
   align-items: center;
 }
 
-aside:last-child a:first-child img {
+.articlenav a:first-child img {
   transform: translate(-0.2em) rotate(180deg);
 }
 
-aside:last-child a:last-child img {
+.articlenav a:last-child img {
   transform: translate(0.2em);
 }
 
-aside:last-child a:last-child {
+.articlenav a:last-child {
   border-right: none;
 }
 
-aside:last-child a:hover {
+.articlenav a:hover {
   background-color: var(--primary);
   color: var(--secondary);
 }
 
-aside:last-child a:hover img {
+.articlenav a:hover img {
   filter: invert(90%) sepia(7%) saturate(626%) hue-rotate(294deg)
     brightness(104%) contrast(104%);
 }
