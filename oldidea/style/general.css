@@ -1,0 +1,161 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@300;500;800&display=swap");
+
+:root {
+  --primary-color: #131313;
+  --secondary-color: #eee;
+  --primary-font: "Lexend Deca", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: var(--primary-color);
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--secondary-color);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Lexend Deca", sans-serif;
+  font-weight: 800;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.flex-center {
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  transition: 0.5s;
+}
+
+html:not([data-scroll="0"]) header {
+  top: -40px;
+}
+
+header:hover {
+  top: 0 !important;
+}
+
+header .logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--primary-color);
+}
+
+header .logo img {
+  color: var(--secondary-color);
+  filter: invert(99%) sepia(7%) saturate(265%) hue-rotate(218deg)
+    brightness(115%) contrast(87%);
+  max-height: 50px;
+  padding: 0.5rem;
+}
+
+header nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--secondary-color);
+}
+
+header nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+header nav ul li {
+  list-style: none;
+  padding: 0.8rem;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  font-weight: 300;
+  font-family: "Lexend Deca", sans-serif;
+  color: var(--primary-color);
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+header nav ul li a:hover {
+  text-decoration: underline;
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  width: 100%;
+  font-family: var(--primary-font);
+}
+
+footer a {
+  color: var(--primary-color);
+  margin-right: 2rem;
+  transition: all 0.3s ease-in-out;
+}
+
+footer img {
+  width: 2rem;
+  height: 2rem;
+}
+
+@media (max-width: 1010px) {
+  header {
+    display: flex;
+    flex-direction: column;
+  }
+  header .logo {
+    width: 100%;
+  }
+  header nav {
+    width: 100%;
+    border-bottom: 2px solid var(--primary-color);
+  }
+  header nav ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  header nav ul li {
+    padding: 1rem;
+  }
+
+  html:not([data-scroll="0"]) header {
+    top: -90px;
+  }
+}
