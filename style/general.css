@@ -1,8 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Space+Mono&family=Work+Sans&display=swap");
 
 :root {
-  --primary: #f72e2a;
+  --primary: #b50603;
   --secondary: #fffffe;
+  --filter: invert(12%) sepia(65%) saturate(6584%) hue-rotate(5deg)
+    brightness(85%) contrast(112%);
+  --reverse-filter: invert(98%) sepia(4%) saturate(1116%) hue-rotate(337deg)
+    brightness(109%) contrast(105%);
 }
 
 * {
@@ -13,6 +17,20 @@
   font-family: "Work Sans", sans-serif;
   font-size: 1.2rem;
   color: var(--primary);
+}
+
+body > span {
+  position: absolute;
+}
+
+body > span:nth-child(1) {
+  top: 1em;
+  left: 2.5em;
+}
+
+body > span:nth-child(2) {
+  top: 1em;
+  right: 2.5em;
 }
 
 body {
@@ -190,8 +208,7 @@ footer span:hover ~ small {
 
 .icon-large,
 .icon-small {
-  filter: invert(31%) sepia(54%) saturate(6978%) hue-rotate(346deg)
-    brightness(99%) contrast(96%);
+  filter: var(--filter);
 }
 
 .icon-small {
