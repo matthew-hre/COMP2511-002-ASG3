@@ -32,3 +32,17 @@ First thoughts:
   - rorschach
   - actual portfolio
   - 1501 practice site
+
+# NEW PLAN!
+
+- pink color scheme!
+- big grid, fun layouts
+- four pages
+  - big ass form
+    - name, email, say hi button
+  - list of projects
+    - carousel
+  - timeline of projects etc
+    - table?
+  - why
+    - kubrick video idea?

@@ -1,0 +1,31 @@
+.video {
+  grid-column: -1 / 1;
+  grid-row: span 2;
+  width: 100%;
+  height: 100%;
+  background-color: #131313;
+}
+
+.transcript {
+  grid-column: -1 / 1;
+  grid-row: -1 / 4;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  overflow: auto;
+  padding: 0.5em;
+}
+
+.transcript * {
+  border: 0;
+}
+
+.dialogue {
+  display: block;
+  margin: 0 2em;
+}
+
+.dialogue h3 {
+  width: 100%;
+  text-align: center;
+}
