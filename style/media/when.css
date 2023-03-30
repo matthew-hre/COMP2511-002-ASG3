@@ -44,7 +44,7 @@
 
   main {
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 6fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 8fr;
   }
 
   /* each nav item spans 2 columns */

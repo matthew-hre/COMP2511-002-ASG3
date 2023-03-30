@@ -33,6 +33,26 @@ body > span:nth-child(2) {
   right: 2.5em;
 }
 
+@media (max-width: 650px) {
+  body > span:nth-child(1) {
+    top: 1em;
+    left: 1em;
+    width: 100px;
+  }
+
+  body > span:nth-child(2) {
+    top: 1em;
+    right: 1em;
+  }
+
+  body > span:nth-child(1),
+  body > span:nth-child(2),
+  body > span a {
+    color: var(--secondary);
+    font-size: 0.8rem;
+  }
+}
+
 body {
   padding: 2.5em;
   overflow: hidden;

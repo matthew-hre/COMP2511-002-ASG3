@@ -55,7 +55,7 @@
 
   main {
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(14, 1fr);
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 3fr 1fr 1fr 1fr;
   }
 
   /* each nav item spans 2 columns */
